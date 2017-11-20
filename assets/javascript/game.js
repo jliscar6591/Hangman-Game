@@ -44,7 +44,7 @@ function consoleLogs() {
 	console.log("--------------------------------");
 }
 
-// function that gets run when the game is won or lost
+
 function resetGame() {
 	// lets reset the variables / stats for the game
 	guessesLeft = 12;
@@ -52,7 +52,6 @@ function resetGame() {
 	wordToBeGuessed = wordsList[Math.floor(Math.random() * wordsList.length)];
 	arrayFromWord = [];
 	breakWordIntoArray();
-	// lets update the document via instructions id
 	var htmlInstructions="<p><h3>Press any key to begin guessing</p></h3>";
 	document.querySelector("#instructions").innerHTML = htmlInstructions;
 	var htmlGameInitial = "<p><h1>";
@@ -124,12 +123,11 @@ function validateUserGuess() {
 
 // function to see whether user has won the game
 function hasUserWon() {
-	// check to see if user has won which will mean all the
-	// letters have been revealed (no false flags remain in the array)
 	if (arrayFromWord.indexOf(false) < 0 ) {
 		console.log("USER WINS");
 		// user has won, increment wins
 		wins++;
+		alert("You WON!...fatty")
 		resetGame();
 	}	
 }
@@ -141,7 +139,7 @@ function hasUserLost() {
 		console.log("USER LOSES");
 		// user has lost, increment losses
 		losses++;
-		// play homer's losing scream
+		alert("You LOSE!...fatty")
 		resetGame();
 	}
 
@@ -158,7 +156,7 @@ function resetHtmlVariable() {
 // lets begin by breaking apart our selected word into an array of letter/flag
 breakWordIntoArray();
 
-// lets begin by resetting the game
+// resetting the game
 resetGame();
 
 // debugging

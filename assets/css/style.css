@@ -1,7 +1,14 @@
 body {
-	background-color: #475875;
+	background-color: red;
 	color: white;
+	text-align:center;
 }
 h1 {
-	color: blue;
+	color: White;
+}
+.reuben {
+	margin-left: 40px;
+}
+.spicy {
+	margin-left: 25px;
 }
